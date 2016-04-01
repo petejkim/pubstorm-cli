@@ -1,0 +1,22 @@
+{
+  "name": "pubstorm",
+  "version": "0.0.3",
+  "description": "PubStorm, the easiest way to publish your HTML5 websites and apps.",
+  "bin": {
+    "storm": "bin/storm.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitrous-io/pubstorm-cli.git"
+  },
+  "keywords": [
+    "html5", "publishing", "hosting", "web", "webapp", "website", "development", "cdn"
+  ],
+  "author": "PubStorm",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/nitrous-io/pubstorm-cli/issues"
+  },
+  "homepage": "https://github.com/nitrous-io/pubstorm-cli#readme"
+}
