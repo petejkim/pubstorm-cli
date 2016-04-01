@@ -1,6 +1,6 @@
 {
   "name": "pubstorm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "PubStorm, the easiest way to publish your HTML5 websites and apps.",
   "bin": {
     "storm": "bin/storm.js"
