@@ -5,8 +5,26 @@ var path = require('path'),
 
 var binName = "storm";
 
+function hasPrefix(str, prefix) {
+  return str.slice(0, prefix.length) === prefix;
+}
+
+function hasSuffix(str, suffix) {
+  return str.slice(-suffix.length) === suffix;
+}
+
+function findIndex(arr, fn) {
+  var i = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (fn(arr[i])) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 var platform = process.platform;
-if (platform.startsWith("win")) {
+if (hasPrefix(platform, "win")) {
   platform = "windows";
 }
 
@@ -21,13 +39,14 @@ switch (process.arch) {
 }
 
 var executable = path.join(__dirname, "..", "dist", platform+"-"+arch, binName);
-if (platform == "windows") {
+if (platform === "windows") {
   executable += ".exe";
 }
 
-var argStartIndex = process.argv.findIndex(function(arg) {
-  return arg.endsWith("storm.js") || arg.endsWith("storm");
+var argStartIndex = findIndex(process.argv, function(arg) {
+  return hasSuffix(arg, "storm.js") || hasSuffix(arg, "storm");
 });
+
 
 var cp = childProcess.spawn(executable, process.argv.slice(argStartIndex+1), {
   cwd: process.cwd(),
