@@ -1,6 +1,6 @@
 {
   "name": "pubstorm",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "PubStorm, the easiest way to publish your HTML5 websites and apps.",
   "bin": {
     "storm": "bin/storm.js"
@@ -18,5 +18,5 @@
   "bugs": {
     "url": "https://github.com/nitrous-io/pubstorm-cli/issues"
   },
-  "homepage": "http://www.pubstorm.com/"
+  "homepage": "https://www.pubstorm.com/"
 }
